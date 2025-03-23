@@ -32,7 +32,7 @@ interface CreateFeedbackParams {
   feedbackId?: string;
 }
 
-interface User {
+export interface User {
   name: string;
   email: string;
   id: string;
@@ -71,12 +71,12 @@ interface GetLatestInterviewsParams {
   limit?: number;
 }
 
-interface SignInParams {
+export interface SignInParams {
   email: string;
   idToken: string;
 }
 
-interface SignUpParams {
+export interface SignUpParams {
   uid: string;
   name: string;
   email: string;
