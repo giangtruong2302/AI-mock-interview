@@ -27,6 +27,7 @@ const Agents = ({ userName, userId, type }: Props) => {
   const lastMessage = message[message.length - 1];
   const handleCall = () => {
     console.log("call");
+    setCallStatus(CallStatus.CONNECTING);
   };
   const handleDisconnect = () => {
     console.log("disconnect");
@@ -57,6 +58,9 @@ const Agents = ({ userName, userId, type }: Props) => {
               className="object-cover rounded-full size-[120px]"
             />
             <h3>{userName}</h3>
+            <h4>
+              {userId}- {type}
+            </h4>
           </div>
         </div>
       </div>

@@ -50,6 +50,7 @@ export async function signUp(params: SignUpParams) {
       success: true,
       message: "Account created successfully. Please sign in.",
     };
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
   } catch (error: any) {
     console.error("Error creating user:", error);
 
@@ -80,8 +81,9 @@ export async function signIn(params: SignInParams) {
       };
 
     await setSessionCookie(idToken);
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
   } catch (error: any) {
-    console.log("");
+    console.log("error", error);
 
     return {
       success: false,
